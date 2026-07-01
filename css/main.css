@@ -1548,9 +1548,15 @@ pre .javascript .function {
   margin-top: 60px;
   margin-bottom: 60px;
   padding: 25px;
-  background: rgba(255,255,255,0.9) none repeat scroll !important;
-  -webkit-box-shadow: 0 0 5px rgba(202,203,203,0.5);
-  -moz-box-shadow: 0 0 5px rgba(202,203,204,0.5);
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-radius: 12px;
+  box-shadow: 0 0 5px rgba(202,203,203,0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.use-motion .post-block:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  will-change: transform, box-shadow;
 }
 .use-motion .pagination,
 .use-motion .comments {
@@ -2646,7 +2652,8 @@ pre {
 .site-brand-container {
   background: var(--gradient-dark) !important;
   background-size: 200% 200%;
-  animation: gradientShift 8s ease infinite;
+  animation: gradientShift 15s ease infinite;
+  will-change: background-position;
 }
 
 @keyframes gradientShift {
@@ -2658,17 +2665,6 @@ pre {
 .main-menu .menu-item-active a::after {
   background: #667eea !important;
   box-shadow: 0 0 10px rgba(102, 126, 234, 0.5);
-}
-
-.use-motion .post-block {
-  background: rgba(255, 255, 255, 0.95) !important;
-  border-radius: 12px;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.use-motion .post-block:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-card-hover);
 }
 
 .post-title a {
@@ -2683,8 +2679,9 @@ pre {
   left: 0;
   width: 0;
   height: 2px;
-  background: var(--gradient-primary);
+  background: #667eea;
   transition: width 0.3s ease;
+  will-change: width;
 }
 
 .post-title a:hover::after {
