@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
@@ -51,6 +51,8 @@
 
 
 
+
+
   <noscript>
   <style>
   .use-motion .brand,
@@ -73,6 +75,7 @@
   .use-motion .logo-line-after i { right: initial; }
   </style>
 </noscript>
+
 <link rel="alternate" href="/rss2.xml" title="信仰者" type="application/rss+xml">
 </head>
 
@@ -201,6 +204,7 @@
       <div class="main-inner">
         <div class="content-wrap">
           
+
           <div class="content archive">
           <div class="archives-section">
             <div class="archives-header">
@@ -319,128 +323,4 @@
               </div>
             </div>
           </div>
-          </div>
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
-
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
       </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="信仰"
-      src="/images/avatar.png">
-  <p class="site-author-name" itemprop="name">信仰</p>
-  <div class="site-description" itemprop="description">选择吧</div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">11</span><span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-  </nav>
-</div>
-
-
-  <div class="links-of-blogroll motion-element">
-    <div class="links-of-blogroll-title"><i class="link fa-fw"></i>
-      https://baidu.com
-    </div>
-    <ul class="links-of-blogroll-list">
-        <li class="links-of-blogroll-item">
-          <a href="https://baidu.com/" title="https:&#x2F;&#x2F;baidu.com" rel="noopener" target="_blank">百度</a>
-        </li>
-        <li class="links-of-blogroll-item">
-          <a href="https://fishc.com.cn/" title="https:&#x2F;&#x2F;fishc.com.cn" rel="noopener" target="_blank">鱼C论坛</a>
-        </li>
-    </ul>
-  </div>
-
-      </div>
-
-    </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-<div class="copyright">
-  &copy; 2021 – 2026 <span itemprop="copyrightHolder">信仰</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author-link"><a href="https://example.com" target="_blank" rel="noopener">信仰者</a></span>
-</div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" target="_blank" rel="noopener">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" target="_blank" rel="noopener">NexT.Pisces</a> 强力驱动
-  </div>
-
-
-      </div>
-    </footer>
-  </div>
-
-  <script src="/lib/jquery/index.js"></script>
-  <script src="/lib/fancybox/jquery.fancybox.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
-  <script src="/js/utils.js"></script>
-  <script src="/js/motion.js"></script>
-  <script src="/js/schemes/pisces.js"></script>
-  <script src="/js/next-boot.js"></script>
-
-  
-  <script src="/js/local-search.js"></script>
-
-</body>
-</html>
