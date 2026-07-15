@@ -2547,9 +2547,7 @@ mjx-container + br {
   width: 240px;
 }
 .sidebar-inner.affix {
-  position: fixed;
-  top: 12px;
-  z-index: 1;
+  display: none;
 }
 .sidebar-inner.affix-bottom {
   position: absolute;
